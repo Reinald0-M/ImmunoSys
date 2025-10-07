@@ -1,0 +1,86 @@
+# ImmunoSys Configuration File
+# 
+# This file contains default configuration for the ImmunoSys package.
+# Users can customize these settings for their specific needs.
+
+# Visualization Settings
+visualization:
+  # Default figure size (width, height) in inches
+  default_figsize: [10, 6]
+  
+  # Default DPI for figures
+  default_dpi: 300
+  
+  # Default colormap for heatmaps
+  default_cmap: 'viridis'
+  
+  # Color palette for multiple lines (matplotlib color names or hex codes)
+  color_palette:
+    - '#1f77b4'  # Blue
+    - '#ff7f0e'  # Orange
+    - '#2ca02c'  # Green
+    - '#d62728'  # Red
+    - '#9467bd'  # Purple
+    - '#8c564b'  # Brown
+    - '#e377c2'  # Pink
+    - '#7f7f7f'  # Gray
+    - '#bcbd22'  # Olive
+    - '#17becf'  # Cyan
+  
+  # Default line width
+  line_width: 2.0
+  
+  # Default marker size
+  marker_size: 8
+  
+  # Font settings
+  fonts:
+    default: 'DejaVu Sans'
+    serif: 'DejaVu Serif'
+    monospace: 'DejaVu Sans Mono'
+
+# Modeling Settings
+modeling:
+  # Default ODE solver
+  default_solver: 'odeint'
+  
+  # Default number of time points for simulation
+  default_num_points: 1000
+  
+  # Tolerance for equilibrium finding
+  equilibrium_tolerance: 1.0e-6
+  
+  # Tolerance for stability analysis
+  stability_tolerance: 1.0e-8
+
+# Utility Settings
+utils:
+  # Default normalization method
+  default_normalization: 'minmax'
+  
+  # Default derivative method
+  default_derivative_method: 'gradient'
+  
+  # Random seed for reproducibility (set to null for no seed)
+  random_seed: 42
+
+# File I/O Settings
+io:
+  # Default file format for saving results
+  default_format: 'npz'
+  
+  # Default image formats for saving figures
+  default_image_formats:
+    - 'png'
+    - 'pdf'
+  
+  # Compression for npz files
+  compress_npz: true
+
+# Performance Settings
+performance:
+  # Number of parallel workers for parameter sweeps (null = auto)
+  num_workers: null
+  
+  # Cache size for computed results
+  cache_size: 100
